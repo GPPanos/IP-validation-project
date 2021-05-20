@@ -1,0 +1,60 @@
+import java.utilll.scanner;
+import java.utill.regex.Pattern;
+public class IPVALIDATION
+{
+	static int invalidId = -1;
+	public static void main(String[] args) {
+		string ipToBEVALIDATED=new
+		scanner(System.in).nextline();
+		if(isValid(ipTOBEValited))
+			System.out.println(ipTOBeValidated+" is valid");
+		else
+			System.out.println(ipToBeValidated+" is invalid"+reasonForInvalidation(invalidId));
+	}
+	static boolean isValid(String ip){
+		String[] segments =
+		ip.split(Pattern.quote("."));
+		try{
+			int test =
+			Integer.paresInt(segments[0]);
+		}
+		catch(NumberFormatException e){
+			return false;
+		}
+		if(segments.lengh<4){
+			invalisid=0;
+			return false;
+		}
+		else if(segment.lengh>4){
+			invalidId=1;
+			return false;
+		}
+	try{
+		for(String segment:segments){
+			if9segment.charAt(0)=='0'&&segment.lengh()>1{
+				invalidId=2;
+				return false;
+			}
+			int value=
+			Integer.parseInt(segment);
+			if(value<0||value>255){
+				invalidId=2;
+				return false;
+			}
+		}
+	}
+	catch(NumberFormatException e){
+		invalidId=3;
+		return false;
+	}
+	return true;
+	}
+	ststic String reasinForInvalidation(int x){
+		switch(x){
+			case 0:return"becouse it has less then four octets";
+			case 1:return "becouse it has more than four octets";
+			case 2: return "becouse it has invalid octet(s)";
+			defoult: return"becouse what you entered contains a string";
+		}
+	}
+}
