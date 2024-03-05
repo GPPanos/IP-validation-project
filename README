@@ -1,0 +1,53 @@
+ IP Validation Project
+
+This Java project, named `IPValidation`, provides a simple tool to validate IPv4 addresses. It checks whether the given input is a valid IPv4 address or not, considering the format and range of octets.
+
+ Usage
+
+1. Compile the Java file:
+   ```bash
+   javac IPValidation.java
+   ```
+
+2. Run the compiled program:
+   ```bash
+   java IPValidation
+   ```
+
+3. Enter the IPv4 address when prompted.
+
+Input Validation
+
+The program validates the entered IPv4 address based on the following criteria:
+
+- It checks if the address has four octets.
+- It ensures that each octet is within the valid range of 0 to 255.
+- It identifies and reports specific issues if found, such as leading zeros or non-numeric characters.
+
+Example
+
+```java
+public class IPValidation {
+    // ... (Existing code)
+
+    public static void main(String[] args) {
+        // ... (Existing code)
+
+        if (isValid(ipToBeValidated)) {
+            System.out.println(ipToBeValidated + " is valid");
+        } else {
+            System.out.println(ipToBeValidated + " is invalid" + reasonForInvalidation(invalidId));
+        }
+    }
+
+    // ... (Existing code)
+}
+```
+
+ Contributing
+
+Feel free to contribute to the project by submitting issues or pull requests. Your input is valuable to enhance the functionality and reliability of the IPValidation tool.
+
+License
+
+This project is licensed under the [MIT License](LICENSE).
